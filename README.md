@@ -66,8 +66,9 @@ qq 群二维码
 - [目录](#目录)
   - [使用说明](#使用说明)
     - [获取运行所需的 Cookies](#获取运行所需的-cookies)
-    - [一、使用 Docker](#一使用-docker)
-    - [二、使用 Linux Crontab 方式](#二使用-linux-crontab-方式)
+    - [一、使用 腾讯云函数](#一使用-腾讯云函数)
+    - [二、使用 Docker](#二使用-docker)
+    - [三、使用 Linux Crontab 方式](#三使用-linux-crontab-方式)
     - [自定义功能配置](#自定义功能配置)
   - [订阅执行结果](#订阅执行结果)
     - [Server 酱 Turbo 版](#server-酱-turbo-版)
@@ -100,13 +101,17 @@ qq 群二维码
 
 **Please be sure to abide by the Github terms when using Actions. Do not abuse the Actions service.**
 
-### 一、使用 Docker
+### 一、使用 腾讯云函数
+
+请参考[腾讯云函数部署](https://github.com/JunzhouLiu/BILIBILI-HELPER-PRE/blob/main/docs/scf.md)
+
+### 二、使用 Docker
 
 请自行参阅 [Issues/75#issuecomment-731705657][28] 和[基于本项目的衍生项目](#基于本项目的衍生项目)。
 
 [28]: https://github.com/JunzhouLiu/BILIBILI-HELPER/issues/75#issuecomment-731705657
 
-### 二、使用 Linux Crontab 方式
+### 三、使用 Linux Crontab 方式
 
 1. 在 linux shell 环境执行以下命令，并按照提示输入 SESSDATA，DEDEUSERID，BILI_JCT，SCKEY 四个参数
 
@@ -205,7 +210,7 @@ userAgent 可选参数列表
 _ps：如果尝试给关注的 up 投币十次后（保不准你关注的是年更 up 主），还没完成每日投币任务，则切换成热榜模式，给热榜视频投币_
 
 _投币数量代码做了处理，如果本日投币不能获得经验了，则不会投币，每天只投能获得经验的硬币。假设你设置每日投币 3 个，早上 7 点你自己投了 2 个硬币，则十点半时，程序只会投 1 个）_
-
+tips:从1.4.1版本开始，随机视频投币有一定的概率会将硬币投给本项目的核心开发者，算是对核心开发者长期以来维护的回馈。
 ## 订阅执行结果
 
 ### Server 酱 Turbo 版
